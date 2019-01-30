@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/2.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.1/ref/settings/
 """
-import django-heroku
+import django_heroku
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
@@ -19,7 +19,7 @@ EMAIL_HOST_PASSWORD = '01224640474'
 
 import os
 
-django-heroku.settings(local())
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -31,7 +31,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'yl5c57n!c!oja=mmr+m8a18w1#&b%g60ltmukw3=ezk*d62d9q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -134,9 +134,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR),"cdns","staticroot")
+STATIC_ROOT = os.path.join(BASE_DIR,"cdns","staticroot")
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,"projectstatic")
 ]
 MEDIA_URL='/media/'
-MEDIA_ROOT= os.path.join(os.path.dirname(BASE_DIR),"cdns","mediaroot")
+MEDIA_ROOT= os.path.join(BASE_DIR,"cdns","mediaroot")
+django_heroku.settings(locals())
