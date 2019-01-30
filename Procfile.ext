@@ -1,1 +1,1 @@
-web: gunicorn taskabdelrhman.wsgi --log-file -
+web: gunicorn taskabdelrhman.wsgi 
