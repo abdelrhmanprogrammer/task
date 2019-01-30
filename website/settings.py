@@ -34,7 +34,7 @@ SECRET_KEY = 'yl5c57n!c!oja=mmr+m8a18w1#&b%g60ltmukw3=ezk*d62d9q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 
@@ -89,12 +89,6 @@ WSGI_APPLICATION = 'website.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'mydatabase',
-    }
-}
-'''DATABASES = {
-    'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'task_db',
         'USER': 'abdelrhman',
@@ -102,7 +96,7 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': '',
     }
-}'''
+}
 
 
 # Password validation
