@@ -25,11 +25,11 @@ def home(request):
             art.save()
         else:
              art.save()
-             print('no')
+             
 
     q = request.GET.get('q')
     query = post.objects.search(q)
-    print(query)
+   
     context={'posts':query}
     return render(request,'home/index.html', context)
 
