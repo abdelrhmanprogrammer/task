@@ -89,6 +89,12 @@ WSGI_APPLICATION = 'website.wsgi.application'
 
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
+    }
+}
+'''DATABASES = {
+    'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'task_db',
         'USER': 'abdelrhman',
@@ -96,7 +102,7 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': '',
     }
-}
+}'''
 
 
 # Password validation
